@@ -124,10 +124,6 @@ def Get_Bookmarks(PCName, Profile, Browser):
                 line = line.replace('"name":', '')
                 line = line.replace('\n', '')
                 BOOKMARK_NAMES.append(line)
-        for x in range(len(BOOKMARK_URLS)):
-            print(f"Name: {BOOKMARK_NAMES[x]}")
-            print(f"URL: {BOOKMARK_URLS[x]}")
-            print()
     elif Browser == "Google Chrome":
         GET_CONTENT = open(GOOGLE_CHROME_PATH, "r").readlines()
         for line in GET_CONTENT:
@@ -144,10 +140,15 @@ def Get_Bookmarks(PCName, Profile, Browser):
                 line = line.replace('"name":', '')
                 line = line.replace('\n', '')
                 BOOKMARK_NAMES.append(line)
-        for x in range(len(BOOKMARK_URLS)):
-            print(f"Name: {BOOKMARK_NAMES[x]}")
-            print(f"URL: {BOOKMARK_URLS[x]}")
-            print()
+
+    print("=======================================================================================")
+    print()
+    for x in range(len(BOOKMARK_URLS)):
+        print(f"Name: {BOOKMARK_NAMES[x]}")
+        print(f"URL: {BOOKMARK_URLS[x]}")
+        print()
+    print("=======================================================================================")
+
 
 #=========================================================================================================================================
 
